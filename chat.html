@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="artister.css">
+    <title></title>
+    <!-- Lager kobling til database fra firebase-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCjPGG0W3Cp0rxINMBbWRocV7a0MT2bk5c",
+    authDomain: "database-test-5f582.firebaseapp.com",
+    databaseURL: "https://database-test-5f582.firebaseio.com",
+    projectId: "database-test-5f582",
+    storageBucket: "database-test-5f582.appspot.com",
+    messagingSenderId: "873004642625",
+    appId: "1:873004642625:web:a4d041669c13283d2e71c0",
+    measurementId: "G-N726CNV7QB"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+  </head>
+
+  <body>
+
+    <div id="divInpt">
+      <input type="text" id="inpNavn" placeholder="Brukernavn">
+      <input type="text" id="inpMeld" placeholder="Skriv melding her">
+      <button type="button" id="btnMeld" onclick="leggtilMeld()">Send!</button>
+      <button type="button" id="btnSlett" onclick="slettHistorikk()">Fjern meldingshistorikk!</button>
+    </div>
+
+    <div id="Meldinger"></div>
+    <script src="chat.js"></script>
+
+  </body>
+</html>
